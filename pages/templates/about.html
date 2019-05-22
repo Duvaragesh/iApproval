@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<p>&nbsp;</p>
+<h1>Simplifying Onboarding Approval Process using Machine Learning (Tensorflow)/Python/Django/REST API/ServiceNow</h1>
+<h2>Problem statement:</h2>
+<p>&nbsp;Ideally a new Joinee in a project will not have access to any of the client application and servicenow to create a Joiner request. Also he/she need helps from existing team member to create create new Joiner request and keep chasing him/her for the status of the request. Once the Joiner request is completed he has to create multiple request to get access to all the client applications.&nbsp;</p>
+<h2>Solution:</h2>
+<p>&nbsp;A new Joiner Just fill the request form and get the signature from the corresponding team manager, upload it in iApproval application.</p>
+<h3>Processes of iApproval:</h3>
+<ol>
+<li>iApproval does the image processing on the upladed request form and predicts the manager name from the signature present in the form using Tensorflow.</li>
+<li>It validates the predicted manager's signature against the actual manager name of the team he/she is joining.</li>
+<li>Once the signature is validated and the manager name is matched then it creates a new Joiner Servicenow request using REST API.</li>
+<li>Write the user and servicenow request details in database.</li>
+<li>A background process keep checking the status of new joiner request. once it is completed and it create sub request automatically to get access to all the client applications.</li>
+<li>Update the sub requests detail and their status in the existing record in database.</li>
+</ol>
+<p>&nbsp;</p>
+<p><strong>Below are used to create iApproval application.</strong></p>
+<div style="padding: 20px;">
+<ul>
+<li>Python&nbsp; - Development</li>
+<li>Django - Web Framwork</li>
+<li>TensorFlow - Machine Learning</li>
+<li>REST API - for Tecket creation in ServiceNow</li>
+<li>HTML &amp; CSS(from bootstrapcdn) for Web Pages</li>
+</ul>
+</div>
+{% endblock %}

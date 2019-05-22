@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+
+<script>
+  $("#file-upload").change(function(){
+  $("#file-name").text(this.files[0].name);
+});
+
+  $("#aprvl_file").change(function() {
+  filename = this.files[0].name
+});
+
+    function set_eud_file(val)
+   {
+     var fileName = val.substr(val.lastIndexOf("\\")+1, val.length);
+    document.getElementById("eud_file_name").value = fileName;
+   }
+ </script>
+<div style="max-width: 700px;">
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">First and last name</span>
+      </div>
+      <input type="text" aria-label="First name" class="form-control" value="Demo" name = "firstname">
+      <input type="text" aria-label="Last name" class="form-control" value="User" name = "lastname">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default" > Email </span>
+      </div>
+          <input type="email" class="form-control" aria-label="Sizing example input" value="sample@sample.com" aria-describedby="inputGroup-sizing-default" name = "emailid">
+    </div>
+  </div>
+  <div class="form-group">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default"> Employee ID </span>
+        </div>
+            <input type="number" class="form-control" aria-label="Sizing example input" value="123456" aria-describedby="inputGroup-sizing-default" name = "empid">
+      </div>
+    </div>
+    <div class="form-group">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Team Name</label>
+      </div>
+      <select class="custom-select" id="team_name" name="team_name" value="Front office Team">
+        <option selected>Choose...</option>
+        <option value="Front office Team">Front office Team</option>
+        <option value="Global Genius Developement Team">Mid Office Team</option>
+        <option value="MIS Development Team">Back Office Team</option>
+        <option value="NA Stage Team">Maintenance Team</option>
+        <option value="Testing Team">Testing Team</option>
+      </select>
+    </div>
+  </div>
+<div class="form-group">
+    <label for="aprvl_file" class="btn btn-light">Select Approval form: &nbsp;</label>
+      <input type="file" id="aprvl_file" name = "aprvl_document">  
+</div>
+
+  <div class="form-group">
+      <label for="eud_file" class="btn btn-light">Select EUD form: &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+      <input type="file" id="eud_file" name = "eud_document">  
+  </div>
+</div>
+<button type="submit" class="btn btn-outline-dark">Submit Details</button>
+</form>
+<br/>
+<br>
+{{ Predicted_result }}.
+
+</div>
+<br/>
+{% endblock %}
