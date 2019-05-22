@@ -25,11 +25,11 @@ Processes in iApproval:
 
 Below are used to create iApproval application:
 -
-Python  - Development
-Django - Web Framwork
-TensorFlow - Machine Learning
-REST API - for Tecket creation in ServiceNow
-HTML & CSS(from bootstrapcdn) for Web Pages
+	Python  - Development
+	Django - Web Framwork
+	TensorFlow - Machine Learning
+	REST API - for Tecket creation in ServiceNow
+	HTML & CSS(from bootstrapcdn) for Web Pages
 
 Other information:
 -
