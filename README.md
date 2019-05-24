@@ -3,11 +3,11 @@ Simplifying Onboarding, Approval & Request Creation Processes using Machine Lear
 
 Problem statement:
 -
- Ideally a new Joinee in a project will not have access to any of the client application and servicenow to create a Joiner request. Also he/she need helps from existing team member to create create new Joiner request and keep chasing him/her for the status of the request. Once the Joiner request is completed he has to create multiple request to get access to all the client applications. 
+ A new Joinee in a project will not have access to any of the client applications and servicenow to create a Joiner request. He/she needs help from an existing team member to create a new Joiner request to get the profile created and then keep chasing them for the status of the request. Once the Joiner request is completed then he/she has to create multiple requests to get access to all the client applications. This process is time consuming and too many manual interventions involved. The new joiner will not be productive untill they get access.  
 
 Solution:
 -
- A new Joiner Just fill the request form and get the signature from the corresponding team manager, upload it in iApproval application.
+ A new Joiner Just fill a request form, get the signature from the corresponding team manager and upload it in iApproval application.
 
 Processes in iApproval:
 -
